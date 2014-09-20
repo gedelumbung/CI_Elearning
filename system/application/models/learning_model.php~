@@ -1,0 +1,24 @@
+<?php
+class Learning_model extends Model
+	{
+		function Learning_model()
+		{
+			parent::Model();
+		}
+		
+		function Daftar_Kategori_Berita()
+		{
+			$query_kategori=$this->db->query("select * from tblkategori");
+			return $query_kategori;
+		}
+		function Daftar_Kategori_Download()
+		{
+			$query_kategori_download=$this->db->query("select * from tblkategoridownload");
+			return $query_kategori_download;
+		}
+		function Slide_Berita()
+		{
+			$query_berita=$this->db->query("SELECT tblberita.judul_berita, tblberita.isi_berita, tblberita.gambar, tblberita.waktu, tblberita.tanggal, tblkategori.nama_kategori from tblberita left outer join tblkategori on tblberita.id_kategori=tblkategori.id_kategori");
+			return $query_berita;
+		}
+	}

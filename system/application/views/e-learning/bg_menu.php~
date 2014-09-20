@@ -1,0 +1,61 @@
+<div id="menu-bar">
+<div id="menu-tengah">
+<div id="smoothmenu1" class="ddsmoothmenu">
+<ul>
+<li><a href="home">Beranda</a></li>
+<li><a href="#">Berita</a>
+  <ul>
+  <?php
+  foreach($kategori_berita->result_array() as $daftar)
+  {
+  	echo "<li><a href='#'>&#8226; Berita ".$daftar['nama_kategori']."</a></li>";
+  }
+  ?>
+  </ul>
+</li>
+<li><a href="#">Perkuliahan</a>
+  <ul>
+  <li><a href="#">&#8226; Daftar Dosen</a></li>
+  <li><a href="#">&#8226; Mata Kuliah</a>
+  <ul>
+    <li><a href="#">&#8226; Teknik Informatika</a></li>
+    <li><a href="#">&#8226; Manajemen Informatika</a></li>
+  </ul>
+  </li>
+  <li><a href="#">&#8226; Pengumuman Nilai</a>
+  <ul>
+    <li><a href="#">&#8226; Teknik Informatika</a></li>
+    <li><a href="#">&#8226; Manajemen Informatika</a></li>
+  </ul>
+  </li>
+  </ul>
+</li>
+<li><a href="#">Download</a>
+  <ul>
+  <?php
+  foreach($kategori_download->result_array() as $daftar)
+  {
+  	echo "<li><a href='#'>&#8226; Download ".$daftar['nama_kategori']."</a></li>";
+  }
+  ?>
+  </ul>
+</li>
+<li><a href="#">Forum</a></li>
+<li><a href="#">Tutorial</a>
+  <ul>
+  <li><a href="#">Desain Grafis & Website</a></li>
+  <li><a href="#">Animasi</a></li>
+  <li><a href="#">Pemrograman</a></li>
+  <li><a href="#">Jaringan</a></li>
+  <li><a href="#">Maintenance Komputer</a></li>
+  </ul>
+</li>
+<li><a href="http://www.dynamicdrive.com/style/">Tes Soal</a></li>
+<li><a href="http://www.dynamicdrive.com/style/">STIKOM PGRI Banyuwangi</a></li>
+</ul>
+<br style="clear: left" />
+</div>
+
+</div>
+</div>
+</div>
